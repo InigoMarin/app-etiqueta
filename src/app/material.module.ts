@@ -40,7 +40,6 @@ import {
     MatPaginatorModule,
     MatTooltipModule,
     MatFormFieldModule
-
   ],
   exports: [
     MatButtonModule,

@@ -5,21 +5,17 @@
 <div class="example-container mat-elevation-z8">
   <div class="example-header">
     <mat-form-field>        
-      <input matInput (keyup)="applyFilter($event.target.value)" placeholder="Caldera">
+      <input matInput placeholder="Caldera" maxlength="10"  style="text-transform:uppercase" />
     </mat-form-field>
+    <button mat-icon-button><mat-icon>search</mat-icon></button>
     <div class="button-row">
-        <button mat-raised-button><mat-icon>delete</mat-icon></button>
-        <button mat-raised-button><mat-icon>print</mat-icon></button>
+        <button mat-raised-button><mat-icon color="primary" >print</mat-icon></button>
+        <button mat-raised-button><mat-icon color="primary">delete</mat-icon></button>
     </div>
-
   </div>
-
-
 
   <mat-table #table [dataSource]="dataSource">  
     <!-- Position Column -->
-
-
     <ng-container matColumnDef="codigo">
       <mat-header-cell *matHeaderCellDef> Seleccionar. </mat-header-cell>
       <mat-cell *matCellDef="let element">
@@ -41,8 +37,8 @@
           <mat-header-cell *matHeaderCellDef>Acciones </mat-header-cell>
           <mat-cell *matCellDef="let element">
               <button mat-icon-button><mat-icon>assignment</mat-icon></button>  
-              <button mat-icon-button><mat-icon>delete</mat-icon></button>
-              <button mat-icon-button><mat-icon>room</mat-icon></button>    
+              <button mat-icon-button><mat-icon>room</mat-icon></button>
+              <button mat-icon-button><mat-icon>delete</mat-icon></button>    
           </mat-cell>
   </ng-container>
 
