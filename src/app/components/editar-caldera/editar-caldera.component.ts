@@ -8,7 +8,7 @@ import {MatTableDataSource} from '@angular/material';
 })
 export class EditarCalderaComponent implements OnInit {
   title = 'app';
-  displayedColumns = ['codigo','descripcion','tipo','accion'];
+  displayedColumns = ['orden','parametro','valor','medida','accion'];
   dataSource = new MatTableDataSource<Parametro>(ELEMENT_DATA);
 
   constructor() { }
@@ -31,6 +31,5 @@ export interface Parametro {
 
 const ELEMENT_DATA: Parametro[] = [
   {orden: 1, articulo:'TAVA000161', etiqueta:'CDOC000762',parametro:'CATÈGORIE',valor:'II2H3P',medida:'', seleccionado:true},
-
-  
+  {orden: 2, articulo:'TAVA000161', etiqueta:'CDOC000762',parametro:'CATÈGORIE',valor:'II2H3P',medida:'', seleccionado:true}
 ];
