@@ -10,6 +10,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { CalderaEtiquetasComponent} from './caldera-etiquetas/caldera-etiquetas.component'
 import { EtiquetaCalderaComponent } from './components/etiqueta-caldera/etiqueta-caldera.component';
+import { EditarCalderaComponent } from './components/editar-caldera/editar-caldera.component';
 
 
 
@@ -18,7 +19,8 @@ import { EtiquetaCalderaComponent } from './components/etiqueta-caldera/etiqueta
   declarations: [
     AppComponent,
     CalderaEtiquetasComponent,
-    EtiquetaCalderaComponent
+    EtiquetaCalderaComponent,
+    EditarCalderaComponent
   ],
   imports: [
     BrowserModule,
