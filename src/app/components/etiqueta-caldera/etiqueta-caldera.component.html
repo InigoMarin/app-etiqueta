@@ -7,7 +7,7 @@
     <mat-form-field>        
       <input matInput placeholder="Introducir Etiqueta" maxlength="10"  style="text-transform:uppercase" />
     </mat-form-field>
-    <button mat-icon-button><mat-icon>search</mat-icon></button>
+    <button mat-icon-button (click)="abrirDialogoBuscar()" ><mat-icon>search</mat-icon></button>
     <div class="button-row">
         <button mat-raised-button><mat-icon color="primary" >print</mat-icon></button>
         <button mat-raised-button><mat-icon color="primary">delete</mat-icon></button>

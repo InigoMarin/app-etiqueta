@@ -16,6 +16,11 @@ export class EditarCalderaComponent implements OnInit {
   ngOnInit() {
   }
 
+  guardarParametro(parametro){
+    console.log('Guardar parametro');
+    console.log(parametro);
+  };
+
 }
 
 export interface Parametro {

@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {MatTableDataSource} from '@angular/material';
+import {MatDialog, MatDialogRef, MAT_DIALOG_DATA} from '@angular/material';
+import { SearchArticuloComponent } from '../components/search-articulo/search-articulo.component';
 
 @Component({
   selector: 'app-caldera-etiquetas',
@@ -11,9 +13,17 @@ export class CalderaEtiquetasComponent implements OnInit {
   displayedColumns = ['codigo','descripcion','tipo','accion'];
   dataSource = new MatTableDataSource<Element>(ELEMENT_DATA);
 
-  constructor() { }
+  constructor(public dialog: MatDialog) { }
 
   ngOnInit() {
+  }
+
+  abrirDialogoBuscar(){
+    console.log('Abriendo Dialogo Buscar.');
+    let dialogRef = this.dialog.open(SearchArticuloComponent, {
+      height: '400px',
+      width: '600px',
+    });
   }
 
 }

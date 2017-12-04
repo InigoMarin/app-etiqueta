@@ -18,24 +18,33 @@
 
   <mat-table #table [dataSource]="dataSource">  
     
-    <ng-container matColumnDef="orden">
-      <mat-header-cell *matHeaderCellDef>Orden. </mat-header-cell>
-      <mat-cell *matCellDef="let element"> {{element.orden}} </mat-cell>
+    <ng-container matColumnDef="orden"   >
+      <mat-header-cell *matHeaderCellDef  >Orden. </mat-header-cell>
+      <mat-cell *matCellDef="let element"  >
+          <input type="text" name="" id="" [(ngModel)]="element.orden">
+      </mat-cell>
     </ng-container>
 
     <ng-container matColumnDef="parametro">
       <mat-header-cell *matHeaderCellDef> Parametro. </mat-header-cell>
-      <mat-cell *matCellDef="let element"> {{element.parametro}} </mat-cell>
+      <mat-cell *matCellDef="let element">
+          <input type="text" name="" id="" [(ngModel)]="element.parametro">
+      </mat-cell>
     </ng-container>
 
     <ng-container matColumnDef="valor">
-      <mat-header-cell *matHeaderCellDef> Valor. </mat-header-cell>
-      <mat-cell *matCellDef="let element"> {{element.valor}} </mat-cell>
-    </ng-container>
+        <mat-header-cell *matHeaderCellDef> Valor. </mat-header-cell>
+        <mat-cell *matCellDef="let element"> 
+          <input type="text"  [(ngModel)]="element.valor">
+          </mat-cell>
+      </ng-container>
+  
 
     <ng-container matColumnDef="medida">
       <mat-header-cell *matHeaderCellDef> Medida. </mat-header-cell>
-      <mat-cell *matCellDef="let element"> {{element.medida}} </mat-cell>
+      <mat-cell *matCellDef="let element"> 
+          <input type="text" name="" id="" [(ngModel)]="element.medida">
+        </mat-cell>
     </ng-container>
 
 
@@ -43,7 +52,8 @@
           <mat-header-cell *matHeaderCellDef>Acciones </mat-header-cell>
           <mat-cell *matCellDef="let element">
               <button mat-icon-button><mat-icon>edit</mat-icon></button>  
-              <button mat-icon-button><mat-icon>note_add</mat-icon></button>  
+              <button mat-icon-button (click)="guardarParametro(element)"><mat-icon>save</mat-icon></button>    
+              <button mat-icon-button><mat-icon>note_add</mat-icon></button>
               <button mat-icon-button><mat-icon>delete</mat-icon></button>    
           </mat-cell>
   </ng-container>

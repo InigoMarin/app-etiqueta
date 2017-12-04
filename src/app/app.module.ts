@@ -11,6 +11,7 @@ import { AppComponent } from './app.component';
 import { CalderaEtiquetasComponent} from './caldera-etiquetas/caldera-etiquetas.component'
 import { EtiquetaCalderaComponent } from './components/etiqueta-caldera/etiqueta-caldera.component';
 import { EditarCalderaComponent } from './components/editar-caldera/editar-caldera.component';
+import { SearchArticuloComponent } from './components/search-articulo/search-articulo.component';
 
 
 
@@ -20,7 +21,8 @@ import { EditarCalderaComponent } from './components/editar-caldera/editar-calde
     AppComponent,
     CalderaEtiquetasComponent,
     EtiquetaCalderaComponent,
-    EditarCalderaComponent
+    EditarCalderaComponent,
+    SearchArticuloComponent
   ],
   imports: [
     BrowserModule,
@@ -31,6 +33,9 @@ import { EditarCalderaComponent } from './components/editar-caldera/editar-calde
     BrowserAnimationsModule
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
+  entryComponents:[
+    SearchArticuloComponent
+  ]
 })
 export class AppModule { }
