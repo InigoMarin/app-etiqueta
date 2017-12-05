@@ -12,3 +12,8 @@
     flex: 0 0 30%;
 }
 
+.example-header {
+    display: flex;
+    flex-direction: column;
+}
+

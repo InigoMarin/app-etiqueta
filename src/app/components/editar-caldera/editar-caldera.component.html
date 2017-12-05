@@ -5,10 +5,23 @@
 
 <div class="example-container mat-elevation-z8">
   <div class="example-header">
-    <mat-form-field>        
-      <input matInput placeholder="Introducir Etiqueta" maxlength="10"  style="text-transform:uppercase" />
-    </mat-form-field>
-    <button mat-icon-button><mat-icon>search</mat-icon></button>
+    <div class="row">
+      <mat-form-field>        
+        <input matInput placeholder="Introducir Etiqueta" maxlength="10"  style="text-transform:uppercase" />  
+      </mat-form-field>
+      <button mat-icon-button><mat-icon>search</mat-icon></button>
+      <label>Aqui esta la descripcion</label>
+    </div>
+
+    <div class="row">
+      <mat-form-field>
+        <input matInput placeholder="Introducir Producto" maxlength="10"  style="text-transform:uppercase" />
+      </mat-form-field>
+      <button mat-icon-button><mat-icon>search</mat-icon></button>
+      
+      <label>Aqui esta la descripcion</label>
+    </div>
+
     <div class="button-row">
         <button mat-raised-button><mat-icon color="primary">content_copy</mat-icon></button>
         <button mat-raised-button><mat-icon color="primary" >print</mat-icon></button>
@@ -17,8 +30,7 @@
   </div>
 
   <mat-table #table [dataSource]="dataSource">  
-    
-    <ng-container matColumnDef="orden"   >
+    <ng-container matColumnDef="orden">
       <mat-header-cell *matHeaderCellDef  >Orden. </mat-header-cell>
       <mat-cell *matCellDef="let element"  >
           <input type="text" name="" id="" [(ngModel)]="element.orden">
